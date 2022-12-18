@@ -23,6 +23,7 @@ clean(){
 	cd ..
 	rm -r "$name"
 }
+cd TempData
 input="filepaths.txt" 
 while IFS= read -r line
 do
@@ -34,4 +35,6 @@ do
 	clean
 
 done < "$input"
+
+: > filepaths.txt
 
